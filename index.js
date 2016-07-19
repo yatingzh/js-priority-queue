@@ -52,7 +52,7 @@ PriorityQueue.prototype.deq = function () {
         if (left < size && this._compare(current, left) < 0) {
             largest = left;
         }
-        if (right < size && this._compare(current, right) < 0) {
+        if (right < size && this._compare(largest, right) < 0) {
             largest = right;
         }
         if (largest === current) break;
