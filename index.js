@@ -33,7 +33,7 @@ PriorityQueue.prototype.peek = function () {
     return this._elements[0];
 }
 
-PriorityQueue.prototype.deq = function () {
+PriorityQueue.prototype.poll = function () {
     if (this.isEmpty()) {
         return null;
     }
@@ -64,7 +64,7 @@ PriorityQueue.prototype.deq = function () {
     return first;
 }
 
-PriorityQueue.prototype.enq = function (element) {
+PriorityQueue.prototype.offer = function (element) {
     var size = this._elements.push(element);
     var current = size - 1;
 
